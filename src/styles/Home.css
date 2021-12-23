@@ -1,6 +1,7 @@
 .home {
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
