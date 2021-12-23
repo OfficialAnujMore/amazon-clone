@@ -1,0 +1,12 @@
+.home{
+    margin-left:20px;
+    margin-right: 20px;
+}
+
+
+.home__banner {
+    width: 100%;
+
+    object-fit: contain;
+
+}

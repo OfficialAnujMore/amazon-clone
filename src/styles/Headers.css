@@ -2,11 +2,16 @@
     background-color: #131921;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    /* By using z-index no other content will overlap */
+    z-index: 100;
+
 
 }
 
 .header__logo {
-    width: 100px;
+    width: 80px;
     margin: 10px 20px 0px 20px;
     object-fit: contain;
 }
@@ -17,7 +22,7 @@
 
 .header__search {
     display: flex;
-    flex:1
+    flex: 1
 }
 
 .header__searchInput {
@@ -31,4 +36,42 @@
     height: 22px !important;
     padding: 5px;
     background-color: #cd9042;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__link {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__optionLineOne {
+    font-size: 10px;
+
+}
+
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+}
+
+.header__basketCount {
+    margin-left: 5px;
+    margin-right: 5px;
 }
