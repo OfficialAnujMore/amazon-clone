@@ -1,12 +1,10 @@
-.home{
-    margin-left:20px;
+.home {
+    margin-left: 20px;
     margin-right: 20px;
 }
 
 
 .home__banner {
     width: 100%;
-
-    object-fit: contain;
-
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
 }
