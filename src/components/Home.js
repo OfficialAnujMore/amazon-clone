@@ -14,13 +14,54 @@ const Home = () => {
         className="home__banner"
       />
 
-      <Product
-        id="1213"
-        title="OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)"
-        price={1799.00}
-        rating={4}
-        image="https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg"
-      />
+      <div className="home__row">
+        <Product
+          id="1213"
+          title="OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)"
+          price={1799.0}
+          rating={4}
+          image="https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg"
+        />
+        <Product
+          id="1213"
+          title="OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)"
+          price={1799.0}
+          rating={4}
+          image="https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg"
+        />
+      </div>
+      <div className="home__row">
+        <Product
+          id="1213"
+          title="OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)"
+          price={1799.0}
+          rating={4}
+          image="https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg"
+        />
+        <Product
+          id="1213"
+          title="OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)"
+          price={1799.0}
+          rating={4}
+          image="https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg"
+        />
+        <Product
+          id="1213"
+          title="OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)"
+          price={1799.0}
+          rating={4}
+          image="https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg"
+        />
+      </div>
+      <div className="home__row">
+        <Product
+          id="1213"
+          title="OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)"
+          price={1799.0}
+          rating={4}
+          image="https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg"
+        />
+      </div>
     </div>
   );
 };
