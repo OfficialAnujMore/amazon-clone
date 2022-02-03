@@ -13,6 +13,11 @@ export const initialState = {
   user: null,
 };
 
+export const getBasketTotal = (basket) => {
+  // console.log(basket?.reduce((amount, item) => item.price + amount, 0));
+  return basket?.reduce((amount, item) => item.price + amount, 0);
+};
+
 const reducer = (state, action) => {
   console.log("Action", action);
 
@@ -30,9 +35,9 @@ const reducer = (state, action) => {
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.item.id
       );
-        
+
       console.warn("Cant find product with ID", action.item.id, ".");
-  
+
       if (index >= 0) {
         newBasket.splice(index, 1);
       } else {
