@@ -4,6 +4,7 @@ import "./App.css";
 import Headers from "./components/Headers";
 import Home from "./components/Home";
 import Checkout from "./components/Checkout";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             element={
               <div>
                 <Headers />
-                <h1>Sign in</h1>
+                <Login/>
               </div>
             }
           />
