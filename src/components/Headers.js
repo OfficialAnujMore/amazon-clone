@@ -4,11 +4,18 @@ import { Link } from "react-router-dom";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useStateValue } from "../dataLayer/StateProvider";
+import { auth } from "../dataLayer/firebase-config";
+import { signOut } from "firebase/auth";
 
 const Headers = () => {
-  const [{ basket }, dispatch] = useStateValue();
-  console.log(basket);
-
+  const [{ basket, user }, dispatch] = useStateValue();
+  console.log("USER EMAIL>>", user);
+  const userSignOut = () => {
+    if (user) {
+      console.log("USER EMAIL>>");
+      signOut(auth);
+    }
+  };
 
   return (
     <nav className="header">
@@ -26,13 +33,26 @@ const Headers = () => {
       </div>
 
       <div className="header__nav">
-        <Link to="/login" className="header__link">
-          <div className="header__option">
-            <span className="header__optionLineOne">Hello User</span>
-            <span className="header__optionLineTwo">Sign in</span>
+        <Link to={!user && "/login"} className="header__link">
+          <div className="header__option" onClick={userSignOut}>
+            {user === null ? (
+              <>
+                <span className="header__optionLineOne">Welcome user</span>
+                <span className="header__optionLineTwo">Sign in</span>
+              </>
+            ) : (
+              <>
+                <span className="header__optionLineOne">
+                  Hello {user.email}
+                </span>
+                <span className="header__optionLineTwo">Sign out</span>
+              </>
+            )}
+
+            {/* <span className="header__optionLineOne">Hello user</span> */}
           </div>
         </Link>
-        <Link to="/" className="header__link">
+        {/* <Link to="/" className="header__link">
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
             <span className="header__optionLineTwo"> & Orders</span>
@@ -43,7 +63,7 @@ const Headers = () => {
             <span className="header__optionLineOne">Your</span>
             <span className="header__optionLineTwo">Prime</span>
           </div>
-        </Link>
+        </Link> */}
       </div>
 
       <Link to="checkout" className="header__link">

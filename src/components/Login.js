@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../dataLayer/firebase-config";
 
 import {
@@ -9,17 +9,16 @@ import {
 } from "firebase/auth";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const login = (event) => {
     event.preventDefault();
-    console.log("Absnab");
 
     signInWithEmailAndPassword(auth, email, password)
       .then((auth) => {
-        //redirect
-        alert("Success  ");
+        navigate("/");
       })
       .catch((e) => alert(e.message));
   };
@@ -28,8 +27,7 @@ const Login = () => {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((auth) => {
-        //redirect
-        alert("Success  ");
+        navigate("/");
       })
       .catch((e) => {
         alert(e.message);
