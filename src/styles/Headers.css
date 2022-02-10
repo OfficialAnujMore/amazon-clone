@@ -6,6 +6,7 @@
     top: 0;
     /* By using z-index no other content will overlap */
     z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 
 }
@@ -71,6 +72,7 @@
 .header__optionBasket {
     display: flex;
     align-items: center;
+
 }
 
 .header__basketCount {
@@ -116,9 +118,29 @@
         border: none;
         width: 80%;
     }
+
     .header__searchIcon {
         height: 19px !important;
         padding: 5px;
         background-color: #cd9042;
     }
+
+    .header__cartIcon{
+        height: 19px !important;
+        
+    }
+    .header__basketCount{
+        font-size: 12px;
+    }
+    .header__optionLineOne {
+        font-size: 9px;
+    
+    }
+    
+    .header__optionLineTwo {
+        font-size: 11px;
+        font-weight: bold;
+    
+    }
+
 }
