@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import OrderPlacement from "./components/OrderPlacement";
 import { useStateValue } from "./dataLayer/StateProvider";
 import { useEffect } from "react";
 import { auth } from "./dataLayer/firebase-config";
@@ -47,6 +48,16 @@ function App() {
               <div>
                 <Headers />
                 <Checkout />
+                {/* <Footer/> */}
+              </div>
+            }
+          />
+          <Route
+            path="/checkout/orderPlacement"
+            element={
+              <div>
+                <Headers />
+                <OrderPlacement />
                 {/* <Footer/> */}
               </div>
             }

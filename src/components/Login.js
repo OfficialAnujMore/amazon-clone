@@ -22,7 +22,7 @@ const Login = () => {
       .then((auth) => {
         navigate("/");
       })
-      .catch((e) => alert(e.message));
+      .catch((e) => alert("An error occurred"));
   };
   const register = (event) => {
     event.preventDefault();
@@ -32,7 +32,7 @@ const Login = () => {
         navigate("/");
       })
       .catch((e) => {
-        alert(e.message);
+        alert("An error occurred");
       });
   };
 

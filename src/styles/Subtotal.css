@@ -18,11 +18,11 @@
     margin-right:5px;
 }
 
-.subtotal>button{
+.subTotal_placeorder>button{
     background-color: #f0c14b;
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
 
-    margin: 10px 0px 10px 0px;
-    padding: 5px 0px 5px 0px
+    margin: 10px 10px 10px 0px;
+    padding: 5px 10px 5px 10px
 }

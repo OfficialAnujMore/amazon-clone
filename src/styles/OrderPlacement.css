@@ -1,0 +1,12 @@
+.confirm{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    /* border-bottom: 1px solid black; */
+
+}
+.confirm_logo{
+    object-fit: contain;
+    width: 20%;
+}

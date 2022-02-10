@@ -11,6 +11,7 @@
     object-fit: contain;
     width: 180px;
     height: 180px;
+    padding: 5px;
 }
 
 .checkoutProduct__info{
@@ -20,6 +21,7 @@
 }
 
 .checkoutProduct__title{
+    margin-top:10px;
     font-size: 17px;
     font-weight: 700;
  
