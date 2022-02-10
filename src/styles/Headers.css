@@ -11,9 +11,11 @@
 }
 
 .header__logo {
-    width: 80px;
+    width: 70px;
     margin: 10px 20px 0px 20px;
     object-fit: contain;
+
+
 }
 
 .header__searchInput {
@@ -74,4 +76,49 @@
 .header__basketCount {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+
+@media (max-width: 767px) {
+    .header__logo {
+        width: 70px;
+        margin: 10px 20px 0px 20px;
+        object-fit: contain;
+
+    }
+
+    .header__searchInput {
+        height: 8px;
+        padding: 10px;
+        border: none;
+        width: 80%;
+    }
+
+    .header__searchIcon {
+        height: 19px !important;
+        padding: 5px;
+        background-color: #cd9042;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .header__logo {
+        width: 50px;
+        margin: 8px 8px 0px 8px;
+        object-fit: contain;
+
+    }
+
+    .header__searchInput {
+        height: 8px;
+        padding: 10px;
+        border: none;
+        width: 80%;
+    }
+    .header__searchIcon {
+        height: 19px !important;
+        padding: 5px;
+        background-color: #cd9042;
+    }
 }
