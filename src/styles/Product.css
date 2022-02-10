@@ -6,8 +6,9 @@
     /* border: 1px solid; */
     background-color: #FFFFFF;
     margin: 10px;
-    max-height: 450px;
-    min-width: 100px;
+    max-height: 400px;
+    min-width: 200px;
+    max-width: 400px;
     z-index: 1;
     border-radius:8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
