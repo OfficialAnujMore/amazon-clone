@@ -1,14 +1,14 @@
 export const initialState = {
   basket: [
-    {
-      id: "12113",
-      title:
-        "OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)",
-      price: 1799.0,
-      rating: 4,
-      image:
-        "https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg",
-    },
+    // {
+    //   id: "12113",
+    //   title:
+    //     "OnePlus Smart Band: 13 Exercise Modes, Blood Oxygen Saturation (SpO2), Heart Rate & Sleep Tracking, 5ATM+Water & Dust Resistant( Android & iOS Compatible)",
+    //   price: 1799.0,
+    //   rating: 4,
+    //   image:
+    //     "https://images-eu.ssl-images-amazon.com/images/I/61XPTRJZcCL._AC_UL450_SR450,320_.jpg",
+    // },
   ],
   user: null,
 };

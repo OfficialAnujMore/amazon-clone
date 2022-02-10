@@ -6,6 +6,7 @@ import { auth } from "../dataLayer/firebase-config";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  onAuthStateChanged,
 } from "firebase/auth";
 
 const Login = () => {

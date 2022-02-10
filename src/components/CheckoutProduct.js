@@ -3,6 +3,7 @@ import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import "../styles/CheckoutProduct.css";
 import { useStateValue } from "../dataLayer/StateProvider";
+import CurrencyFormat from "react-currency-format";
 
 const CheckoutProduct = ({ id, title, image, price, rating }) => {
   const [state, dispatch] = useStateValue();
@@ -21,10 +22,19 @@ const CheckoutProduct = ({ id, title, image, price, rating }) => {
       <img className="checkoutProduct__image" src={image} alt="" />
       <div className="checkoutProduct__info">
         <p className="checkoutProduct__title">{title}</p>
-        <p className="checkoutProduct__price">
-          <small>₹</small>
-          <strong>{price}</strong>
-        </p>
+        <CurrencyFormat
+          renderText={(value) => (
+            <>
+              <strong>{` ${value}`}</strong>
+            </>
+          )}
+          decimalScale={2}
+          value={price}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={"₹"}
+        />
+
         <div className="checkoutProduct__rating">
           {Array(rating)
             .fill()

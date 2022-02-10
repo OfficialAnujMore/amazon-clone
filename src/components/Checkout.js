@@ -18,8 +18,8 @@ const Checkout = () => {
         />
         {basket?.length === 0 ? (
           <div>
-            <h1>Your Amazon Cart is empty.</h1>
-            <p>Check your Saved for later items below or continue shopping.</p>
+            <h1 className="checkout_title">Your Amazon Cart is empty.</h1>
+            <p className="checkout_p">Check your Saved for later items below or continue shopping.</p>
           </div>
         ) : (
           <div>

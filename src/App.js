@@ -47,7 +47,7 @@ function App() {
               <div>
                 <Headers />
                 <Checkout />
-                <Footer/>
+                {/* <Footer/> */}
               </div>
             }
           />
