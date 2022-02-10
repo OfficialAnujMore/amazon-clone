@@ -6,7 +6,8 @@
     padding: 20px;
     background-color: #ece9e9;
     border: 1px solid #1102028f;
-    border-radius:5px
+    border-radius:5px;
+    margin-bottom:10px;
 }
 
 .subtotal_gift{
