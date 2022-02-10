@@ -10,6 +10,7 @@ import {
 
 const Login = () => {
   const navigate = useNavigate();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -45,6 +46,12 @@ const Login = () => {
       <div className="login_container">
         <h1 className="container_signin">Sign in</h1>
         <form action="">
+          <h5>Name</h5>
+          <input
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            type="text"
+          />
           <h5>Email</h5>
           <input
             value={email}

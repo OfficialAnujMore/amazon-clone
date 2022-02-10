@@ -10,7 +10,7 @@
 .home__banner {
     width: 100%;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    /* margin-bottom: -200px; */
+    margin-bottom: -200px;
     z-index: -1
 }
 
