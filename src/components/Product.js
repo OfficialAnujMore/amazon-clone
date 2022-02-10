@@ -7,23 +7,22 @@ import { useStateValue } from "../dataLayer/StateProvider";
 const Product = ({ id, title, price, image, rating }) => {
   const [state, dispatch] = useStateValue();
 
-
-  const addToBasket = () =>{
+  const addToBasket = () => {
     dispatch({
-      type:'ADD_TO_BASKET',
+      type: "ADD_TO_BASKET",
       item: {
-          id: id,
-          title: title,
-          price: price,
-          image: image,
-          rating: rating,
-      }
-    })
-
-  }
+        id: id,
+        title: title,
+        price: price,
+        image: image,
+        rating: rating,
+      },
+    });
+  };
 
   return (
     <div className="product">
+      <img src={image} alt="product_image" />
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
@@ -49,7 +48,7 @@ const Product = ({ id, title, price, image, rating }) => {
           )}
         </div>
       </div>
-      <img src={image} alt="product_image" />
+
       <button onClick={addToBasket}>Add to basket</button>
     </div>
   );
