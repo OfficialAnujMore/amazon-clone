@@ -7,7 +7,7 @@
 https://user-images.githubusercontent.com/53031645/153598453-eec0a53c-87a0-4807-a80b-29af23f4be92.mp4
 
 <div>
-    <h1>Languages & Framework usxssdssed</h1>
+    <h1>Languages & Framework</h1>
 <!--HTML-->
     <img height="40" src="https://user-images.githubusercontent.com/53031645/153595251-5cfb8a9a-f54b-4036-8e4e-fe49268f4368.svg" >
 <!--CSS-->
