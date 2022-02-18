@@ -14,7 +14,8 @@ const Home = () => {
     },
     {
       id: "8986234544",
-      title: "Samsung Galaxy M52 5G (Blazing Black, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display",
+      title:
+        "Samsung Galaxy M52 5G (Blazing Black, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display",
       price: 37999,
       rating: 2,
       image: "https://m.media-amazon.com/images/I/71QT7dSK4BL._SL1500_.jpg",
@@ -33,8 +34,7 @@ const Home = () => {
         "Oneplus Bullets Wireless Z Bass Edition Bluetooth in Ear Earphones with mic (Black)",
       price: 1999,
       rating: 2,
-      image:
-        "https://m.media-amazon.com/images/I/510Ns+URsGS._SL1500_.jpg",
+      image: "https://m.media-amazon.com/images/I/510Ns+URsGS._SL1500_.jpg",
     },
     {
       id: "45784132123",
@@ -42,8 +42,7 @@ const Home = () => {
         "Samsung Galaxy M52 5G (Blazing Black, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display",
       price: 24999,
       rating: 2,
-      image:
-        "https://m.media-amazon.com/images/I/71b5BwTCcZL._SL1500_.jpg",
+      image: "https://m.media-amazon.com/images/I/71b5BwTCcZL._SL1500_.jpg",
     },
     {
       id: "781213232",
@@ -60,8 +59,7 @@ const Home = () => {
         "OnePlus 9RT 5G (Nano Silver, 8GB RAM, 128GB Storage)+Alexa hands-free capable",
       price: 37999.0,
       rating: 4,
-      image:
-        "https://m.media-amazon.com/images/I/61NC3RS4RXL._SL1500_.jpg",
+      image: "https://m.media-amazon.com/images/I/61NC3RS4RXL._SL1500_.jpg",
     },
     {
       id: "1454646",
@@ -73,7 +71,8 @@ const Home = () => {
     },
     {
       id: "8986234544",
-      title: "Samsung Galaxy M52 5G (Blazing Black, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display",
+      title:
+        "Samsung Galaxy M52 5G (Blazing Black, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display",
       price: 37999,
       rating: 3,
       image: "https://m.media-amazon.com/images/I/71QT7dSK4BL._SL1500_.jpg",
@@ -92,8 +91,7 @@ const Home = () => {
         "Oneplus Bullets Wireless Z Bass Edition Bluetooth in Ear Earphones with mic (Black)",
       price: 1999,
       rating: 2,
-      image:
-        "https://m.media-amazon.com/images/I/510Ns+URsGS._SL1500_.jpg",
+      image: "https://m.media-amazon.com/images/I/510Ns+URsGS._SL1500_.jpg",
     },
     {
       id: "45784132123",
@@ -101,8 +99,7 @@ const Home = () => {
         "Samsung Galaxy M52 5G (Blazing Black, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display",
       price: 24999,
       rating: 2,
-      image:
-        "https://m.media-amazon.com/images/I/71b5BwTCcZL._SL1500_.jpg",
+      image: "https://m.media-amazon.com/images/I/71b5BwTCcZL._SL1500_.jpg",
     },
     {
       id: "781213232",
@@ -119,15 +116,12 @@ const Home = () => {
         "OnePlus 9RT 5G (Nano Silver, 8GB RAM, 128GB Storage)+Alexa hands-free capable",
       price: 37999.0,
       rating: 4,
-      image:
-        "https://m.media-amazon.com/images/I/61NC3RS4RXL._SL1500_.jpg",
+      image: "https://m.media-amazon.com/images/I/61NC3RS4RXL._SL1500_.jpg",
     },
   ];
 
   useEffect(() => {
-    productData.map((item) => {
-      console.log("Data", item);
-    });
+    productData.map((item) => {});
   }, [productData]);
   return (
     <div className="home">
@@ -142,7 +136,6 @@ const Home = () => {
 
       <div className="home__row">
         {productData.map((item) => {
-          console.log("Datsasasasaa", item);
           return (
             <Product
               id={item.id}

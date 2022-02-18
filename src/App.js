@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import Signup from "./components/Signup";
 import OrderPlacement from "./components/OrderPlacement";
 import { useStateValue } from "./dataLayer/StateProvider";
 import { useEffect } from "react";
@@ -37,7 +38,7 @@ function App() {
     };
   }, []);
 
-  console.log("USER IS >>>>", user);
+
   return (
     <Router>
       <div className="app">
@@ -68,6 +69,16 @@ function App() {
               <div>
                 <Headers />
                 <Login />
+                <Footer/>
+              </div>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <div>
+                <Headers />
+                <Signup /> 
                 <Footer/>
               </div>
             }

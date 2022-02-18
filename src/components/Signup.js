@@ -1,32 +1,32 @@
 import React, { useState } from "react";
-import "../styles/Login.css";
+import "../styles/Signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, signInWithGoogle } from "../dataLayer/firebase-config";
 
 import {
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopUp,
 } from "firebase/auth";
 
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const login = (event) => {
+  const register = (event) => {
     event.preventDefault();
 
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((auth) => {
         navigate("/");
       })
-      .catch((e) => alert("An error occurred"));
+      .catch((e) => {
+        alert("An error occurred");
+      });
   };
-  const register = () => {
-    navigate("/signup");
-  };
-
   const google = (event) => {
     event.preventDefault();
 
@@ -41,16 +41,22 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
+    <div className="signup">
       <img
         src="https://pngimg.com/uploads/amazon/amazon_PNG13.png"
         alt="logo"
-        className="login_logo"
+        className="signup_logo"
       />
 
-      <div className="login_container">
+      <div className="signup_container">
         <h1 className="container_signin">Sign in</h1>
         <form action="">
+          <h5>Name</h5>
+          <input
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            type="text"
+          />
           <h5>Email</h5>
           <input
             value={email}
@@ -63,11 +69,11 @@ const Login = () => {
             onChange={(event) => setPassword(event.target.value)}
             type="password"
           />
-          <button className="login_signIn" type="submit" onClick={login}>
+          {/* <button className="signup_signIn" type="submit" onClick={login}>
             Sign in
-          </button>
+          </button> */}
         </form>
-        <div className="login_checkbox">
+        <div className="signup_checkbox">
           <input type="checkbox" />
           <p>
             By continuing, you agree to Amazon's Conditions of Use and Privacy
@@ -76,7 +82,7 @@ const Login = () => {
         </div>
 
         <button className="signUp" onClick={google}>
-          Continue with google
+          Sign up with google
         </button>
         <button className="signUp" onClick={register}>
           Create your amazon account
@@ -86,4 +92,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

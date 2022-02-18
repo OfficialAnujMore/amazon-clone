@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import {
-  getAuth
-} from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
 
 const firebaseConfig = initializeApp({
   apiKey: "AIzaSyBblncZDrohxWd9BterIIJDPGlSpuXMk0Y",
@@ -13,8 +12,9 @@ const firebaseConfig = initializeApp({
   measurementId: "G-YLYES12BEN",
 });
 
-
-
-const app = firebaseConfig
+const app = firebaseConfig;
 export const auth = getAuth(app);
+// export default app;
 
+const provider = new GoogleAuthProvider();
+export const signInWithGoogle = () => signInWithPopup(auth, provider);

@@ -26,7 +26,7 @@ const Checkout = () => {
             <h2 className="checkout_title">Your shopping basket</h2>
             {basket?.map((item) => {
               {
-                console.log(item);
+                // console.log(item);
               }
               return (
                 <CheckoutProduct

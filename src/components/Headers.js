@@ -9,10 +9,9 @@ import { signOut } from "firebase/auth";
 
 const Headers = () => {
   const [{ basket, user }, dispatch] = useStateValue();
-  console.log("USER EMAIL>>", user);
+
   const userSignOut = () => {
     if (user) {
-      console.log("USER EMAIL>>");
       signOut(auth);
     }
   };
@@ -43,7 +42,7 @@ const Headers = () => {
             ) : (
               <>
                 <span className="header__optionLineOne">
-                  Hello {user.email}
+                  Hello {user.displayName}
                 </span>
                 <span className="header__optionLineTwo">Sign out</span>
               </>
