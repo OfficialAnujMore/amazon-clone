@@ -43,7 +43,7 @@ const Subtotal = () => {
         prefix={"₹"}
       />{" "}
       {/* <Link to="orderPlacement" className="subTotal_placeorder"> */}
-      <button onClick={placed}>Place order</button>
+      <button className="subTotal_placeorder" onClick={placed}>Place order</button>
       {/* </Link> */}
     </div>
   );
