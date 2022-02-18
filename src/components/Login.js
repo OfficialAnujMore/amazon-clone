@@ -19,7 +19,7 @@ const Login = () => {
 
     if (email === "") {
       alert("Enter a valid email");
-    } else if (password.length <= 8) {
+    } else if (password.length < 6) {
       alert("Enter a valid password");
     } else {
       signInWithEmailAndPassword(auth, email, password)

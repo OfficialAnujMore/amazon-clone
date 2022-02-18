@@ -41,12 +41,11 @@ const Home = () => {
 
       {data.length === 0 ? (
         <div className="loader">
-          <CircularProgress color="warning"  size="4rem"/>
+          <CircularProgress color="warning" size="4rem" />
         </div>
       ) : (
         <div className="home__row">
           {data.map((item) => {
-            console.log("newData", item.title);
             return (
               <Product
                 id={item.id}
