@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Home.css";
 import Product from "./Product";
+import colRef from "../dataLayer/firebase-config";
+import { getDocs } from "firebase/firestore";
 
 const Home = () => {
+  const [data, setData] = useState([]);
   const productData = [
     {
       id: "1454646",
@@ -121,8 +124,33 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    productData.map((item) => {});
-  }, [productData]);
+    console.log("asaa", colRef);
+    getDocs(colRef).then((snapshot) => {
+      console.log(
+        "asaaa888",
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          title: doc.data().title,
+          price: doc.data().price,
+          ratings: doc.data().rating,
+          image: doc.data().image,
+        }))
+      );
+      setData(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          title: doc.data().title,
+          price: doc.data().price,
+          ratings: doc.data().rating,
+          image: doc.data().image,
+        }))
+      );
+    });
+
+    // productData.map((item) => {});
+  }, []);
+
+  console.log("asaa666666", data);
   return (
     <div className="home">
       <img
@@ -135,6 +163,7 @@ const Home = () => {
       />
 
       <div className="home__row">
+        
         {productData.map((item) => {
           return (
             <Product

@@ -68,14 +68,42 @@
     width: 100%;
     border-radius: 2px;
     margin: 10px 0px 5px 0px;
-    padding: 5px 0px 5px 0px
+    padding: 8px 0px 8px 0px
 }
 
-.signUp {
+.signUpNew {
 
     border: 1px solid;
     width: 100%;
     border-radius: 2px;
     margin: 10px 0px 5px 0px;
-    padding: 5px 0px 5px 0px
+    padding: 8px 0px 8px 0px
+}
+
+.googleAuth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: 100%;
+    border-radius: 2px;
+    margin: 10px 0px 5px 0px;
+    padding: 5px 0px 5px 0px;
+}
+
+.googleAuthText {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: 100%;
+    border-radius: 2px;
+    margin: 10px 0px 5px 0px; */
+    padding: 0px 10px 0px 10px;
+}
+
+.googleImg {
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
 }

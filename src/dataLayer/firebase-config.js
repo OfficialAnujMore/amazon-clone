@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
+
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { getFirestore, collection,  } from "firebase/firestore";
 
 const firebaseConfig = initializeApp({
   apiKey: "AIzaSyBblncZDrohxWd9BterIIJDPGlSpuXMk0Y",
@@ -18,3 +19,12 @@ export const auth = getAuth(app);
 
 const provider = new GoogleAuthProvider();
 export const signInWithGoogle = () => signInWithPopup(auth, provider);
+
+// init server
+const db = getFirestore();
+
+// collection ref
+
+const colRef = collection(db, "productData");
+
+export default colRef;

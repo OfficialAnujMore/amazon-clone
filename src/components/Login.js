@@ -62,6 +62,7 @@ const Login = () => {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             type="password"
+            
           />
           <button className="login_signIn" type="submit" onClick={login}>
             Sign in
@@ -75,10 +76,16 @@ const Login = () => {
           </p>
         </div>
 
-        <button className="signUp" onClick={google}>
-          Continue with google
+        <button className="googleAuth" onClick={google}>
+          <img
+            src="https://pngimg.com/uploads/google/google_PNG19630.png"
+            alt="google"
+            className="googleImg"
+          />
+          <p className="googleAuthText">Continue with google</p>
         </button>
-        <button className="signUp" onClick={register}>
+
+        <button className="signUpNew" onClick={register}>
           Create your amazon account
         </button>
       </div>

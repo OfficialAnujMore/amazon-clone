@@ -20,7 +20,7 @@ const Signup = () => {
     event.preventDefault();
 
     createUserWithEmailAndPassword(auth, email, password)
-      .then((auth) => {
+      .then((res) => {
         navigate("/");
       })
       .catch((e) => {
@@ -81,11 +81,16 @@ const Signup = () => {
           </p>
         </div>
 
-        <button className="signUp" onClick={google}>
-          Sign up with google
-        </button>
         <button className="signUp" onClick={register}>
-          Create your amazon account
+          Sign up
+        </button>
+        <button className="googleAuth" onClick={google}>
+          <img
+            src="https://pngimg.com/uploads/google/google_PNG19630.png"
+            alt="google"
+            className="googleImg"
+          />
+          <p className="googleAuthText">Continue with google</p>
         </button>
       </div>
     </div>
