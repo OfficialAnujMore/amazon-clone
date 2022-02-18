@@ -124,27 +124,22 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    console.log("asaa", colRef);
+  
+
     getDocs(colRef).then((snapshot) => {
-      console.log(
-        "asaaa888",
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          title: doc.data().title,
-          price: doc.data().price,
-          ratings: doc.data().rating,
-          image: doc.data().image,
-        }))
-      );
       setData(
         snapshot.docs.map((doc) => ({
           id: doc.id,
           title: doc.data().title,
           price: doc.data().price,
-          ratings: doc.data().rating,
+          rating: doc.data().rating,
           image: doc.data().image,
         }))
       );
+
+      data.map((item) => {
+        console.log(item);
+      });
     });
 
     // productData.map((item) => {});
@@ -163,8 +158,22 @@ const Home = () => {
       />
 
       <div className="home__row">
-        
-        {productData.map((item) => {
+        {/* {productData.map((item) => {
+          console.log("data1111", data.length);
+          
+          return (
+            <Product
+              id={item.id}
+              title={item.title}
+              image={item.image}
+              price={item.price}
+              rating={item.rating}
+            />
+          );
+        })} */}
+
+        {data.map((item) => {
+          console.log("newData", item.title);
           return (
             <Product
               id={item.id}
