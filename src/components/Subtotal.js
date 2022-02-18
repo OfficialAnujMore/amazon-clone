@@ -3,16 +3,23 @@ import "../styles/Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../dataLayer/StateProvider";
 import { getBasketTotal } from "../dataLayer/reducer";
+import { useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 
 const Subtotal = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const navigation = useNavigate();
+
+  const [{ basket, user }, dispatch] = useStateValue();
   const placed = () => {
-    dispatch({
-      type: "PLACE_ORDER",
-      
-    });
+    if (user === null) {
+      alert("Before placing your order, please log in.");
+      navigation("/login");
+    } else {
+      dispatch({
+        type: "PLACE_ORDER",
+      });
+    }
   };
   return (
     <div className="subtotal">
@@ -35,9 +42,9 @@ const Subtotal = () => {
         thousandSeparator={true}
         prefix={"₹"}
       />{" "}
-      <Link to="orderPlacement" className="subTotal_placeorder">
-        <button onClick={placed}>Place order</button>
-      </Link>
+      {/* <Link to="orderPlacement" className="subTotal_placeorder"> */}
+      <button onClick={placed}>Place order</button>
+      {/* </Link> */}
     </div>
   );
 };
