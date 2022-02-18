@@ -17,11 +17,17 @@ const Login = () => {
   const login = (event) => {
     event.preventDefault();
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((auth) => {
-        navigate("/");
-      })
-      .catch((e) => alert("An error occurred"));
+    if (email === "") {
+      alert("Enter a valid email");
+    } else if (password.length <= 8) {
+      alert("Enter a valid password");
+    } else {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((auth) => {
+          navigate("/");
+        })
+        .catch((e) => alert("Oops! something went wrong"));
+    }
   };
   const register = () => {
     navigate("/signup");
@@ -62,19 +68,11 @@ const Login = () => {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             type="password"
-            
           />
           <button className="login_signIn" type="submit" onClick={login}>
             Sign in
           </button>
         </form>
-        <div className="login_checkbox">
-          <input type="checkbox" />
-          <p>
-            By continuing, you agree to Amazon's Conditions of Use and Privacy
-            Notice.
-          </p>
-        </div>
 
         <button className="googleAuth" onClick={google}>
           <img
