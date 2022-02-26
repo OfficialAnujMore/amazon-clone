@@ -27,3 +27,9 @@ https://user-images.githubusercontent.com/53031645/153598453-eec0a53c-87a0-4807-
 
 
 </div>
+
+<!--
+    npm run build
+    firebase deploy
+
+ -->
