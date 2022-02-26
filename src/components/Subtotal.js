@@ -18,7 +18,9 @@ const Subtotal = () => {
     } else {
       dispatch({
         type: "PLACE_ORDER",
+      
       });
+      navigation("/checkout/orderPlacement");
     }
   };
   return (
